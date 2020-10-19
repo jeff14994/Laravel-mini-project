@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Users;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,18 +30,22 @@ Route::get('/', function () {
 // });
 
 //Redirect / url to about-url
-Route::get('/', function(){
-    return redirect('about-url');
-});
+// Route::get('/', function(){
+//     return redirect('about-url');
+// });
 
-Route::get('/about-url', function(){
-    return view('about');
-});
+// Route::get('/about-url', function(){
+//     return view('about');
+// });
 
 //Route::get('/contact-url', function(){
 //     return view('contact');
 // });
 
 //更快的寫法
-Route::view('contact-url', ' contact');
+// Route::view('contact-url', ' contact');
 
+
+//Controller
+// Route::get("users", "Users@index");
+Route::get('users', [Users::class, 'index']);
