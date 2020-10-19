@@ -19,9 +19,13 @@ Route::get('/', function () {
 });
 
 //Pass with parameters
-Route::get('/{name}', function ($name) {
-    echo $name;
-    return view('welcome', ['name' => $name]); 
+// Route::get('/{name}', function ($name) {
+//     echo $name;
+//     return view('welcome', ['name' => $name]); 
+// });
+
+Route::get('/', function(){
+    return view('anchor');
 });
 
 Route::get('/about-url', function(){
