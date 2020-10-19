@@ -13,6 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//If get url /, return welcome page from view
 Route::get('/', function () {
-    return view('hello');
+    return view('welcome');
 });
+
+//Pass with parameters
+Route::get('/{name}', function ($name) {
+    echo $name;
+    return view('welcome'); 
+});
+
+Route::get('/about-url', function(){
+    return view('about');
+});
+
+//Route::get('/contact-url', function(){
+//     return view('contact');
+// });
+
+//更快的寫法
+Route::view('contact-url', ' contact');
+
