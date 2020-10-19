@@ -48,4 +48,4 @@ Route::get('/', function () {
 
 //Controller
 // Route::get("users", "Users@index");
-Route::get('users', [Users::class, 'index']);
+Route::get('users/{user}', [Users::class, 'index']);
