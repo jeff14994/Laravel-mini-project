@@ -24,8 +24,14 @@ Route::get('/', function () {
 //     return view('welcome', ['name' => $name]); 
 // });
 
+//Anchor tag
+// Route::get('/', function(){
+//     return view('anchor');
+// });
+
+//Redirect / url to about-url
 Route::get('/', function(){
-    return view('anchor');
+    return redirect('about-url');
 });
 
 Route::get('/about-url', function(){
