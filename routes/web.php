@@ -72,4 +72,4 @@ use App\Http\Controllers\UsersController;
 //====================================================================================
 //Use Controller to return users page
 
-Route::get("user",[UsersController::class, 'loadView']);
+Route::get("user/{name}",[UsersController::class, 'loadView']);
