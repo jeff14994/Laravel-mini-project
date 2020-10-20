@@ -14,9 +14,9 @@ use App\Http\Controllers\Users;
 */
 
 //If get url /, return welcome page from view
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 //Pass with parameters
 // Route::get('/{name}', function ($name) {
@@ -45,7 +45,26 @@ Route::get('/', function () {
 //更快的寫法
 // Route::view('contact-url', ' contact');
 
-
+//====================================================================================
 //Controller
 // Route::get("users", "Users@index");
-Route::get('users/{user}', [Users::class, 'index']);
+// Route::get('users/{user}', [Users::class, 'index']);
+
+//====================================================================================
+//Return users page
+// Route::get('/', function () {
+//     return view('users');
+// });
+
+//Alternative-1
+// Route::get("/user", function(){
+//     return view("users");
+// });
+
+//Alternative-2
+// Route::view("user", "users");
+
+//Pass with parameter
+Route::get("/user/{name}", function($name){
+    return view("users", ['name' => $name]); 
+});
