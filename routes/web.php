@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Users;
+use App\Http\Controllers\UsersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -65,6 +66,10 @@ use App\Http\Controllers\Users;
 // Route::view("user", "users");
 
 //Pass with parameter
-Route::get("/user/{name}", function($name){
-    return view("users", ['name' => $name]); 
-});
+// Route::get("/user/{name}", function($name){
+//     return view("users", ['name' => $name]); 
+// });
+//====================================================================================
+//Use Controller to return users page
+
+Route::get("user",[UsersController::class, 'loadView']);
