@@ -8,6 +8,6 @@ class UsersController extends Controller
 {
     //
     function loadView(){
-        return view("users");
+        return view("users", ['name' => '@x0mg']);
     }
 }
