@@ -12,6 +12,6 @@ class UsersController extends Controller
     // }
 
     function viewLoad(){
-        return view('users', ['users'=>['jeff', 'sam', 'omg']]);
+        return view('users', ['user'=>'jeff']);
     }
 }
