@@ -12,6 +12,7 @@ class UsersController extends Controller
     // }
 
     function viewLoad(){
-        return view('users', ['user'=>'jeff']);
+        $data = ['jeff', 'peter', 'locky', 'bruce'];
+        return view('users ', ['users'=>$data]);
     }
 }
