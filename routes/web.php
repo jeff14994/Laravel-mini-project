@@ -74,9 +74,13 @@ use App\Http\Controllers\UsersController;
 
 // Route::get("user/{name}",[UsersController::class, 'loadView']);
 //====================================================================================
+//Reuse the Header component
 Route::get('/', function(){
     return view('welcome');
 });
 
-Route::view('users', 'users');
-Route::view('about', 'about');
+// Route::view('users', 'users');
+// Route::view('about', 'about');
+//====================================================================================
+
+Route::get("users", [UsersController::class, 'viewLoad']);
